@@ -72,7 +72,7 @@ def login_mail():
     punk_address = wait(browser,10).until(EC.presence_of_element_located((By.XPATH,'//b[text()="Private Key:"]/following-sibling::div[2]/span'))).text
     print(f"[*] [{email}] Private Key - Punk Wallet Saved!")
     with open('saved.txt','a') as f:
-        f.write(f"[*] [{email}] Private Key: {private}|Punk Wallet: {punk_address}\n")
+        f.write(f"[{email}] Private Key: {private}|Punk Wallet: {punk_address}\n")
     
 
 def open_browser(k):
